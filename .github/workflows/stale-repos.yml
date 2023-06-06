@@ -1,7 +1,9 @@
 name: stale repo identifier
 
 on:
-  push
+  push:
+    branches:
+      - main
   workflow_dispatch:
   schedule:
     - cron: '3 2 1 * *'
