@@ -1,6 +1,7 @@
 name: stale repo identifier
 
 on:
+  push
   workflow_dispatch:
   schedule:
     - cron: '3 2 1 * *'
@@ -27,3 +28,4 @@ jobs:
         title: Stale repository report
         content-filepath: ./stale_repos.md
         assignees: samsmithnz
+        token: ${{ secrets.GH_TOKEN }}
